@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalogue Management System</title>
+    <link rel="stylesheet" href="output.css" />
+</head>
+
+<body class="bg-[#F5F6F8]">
+
+    <nav id="navbar"
+        class="flex justify-between fixed w-full top-0 shadow-lg z-50 h-15 transition-all duration-300 bg-transparent">
+        <div class="p-3">
+            <h1 id="main-heading" class="text-2xl text-white font-bold ">Product Catalogue Management System</h1>
+        </div>
+        <div class="p-3 flex justify-between w-30">
+            <img class="size-8" src="bell-icon.svg" alt="" />
+            <img class="size-8" src="profile-icon.svg" alt="" />
+        </div>
+    </nav>
+
+    <div class="h-screen bg-[url('./background.png')] bg-cover relative mb-13">
+        <div class="w-full h-full flex justify-center items-center">
+            <h1 class="text-5xl text-white z-50">Welcome to My Product Catalogue System</h1>
+        </div>
+        <div id="back-img" class="bg-black/80 absolute inset-0"></div>
+    </div>
+
+    <div class="flex flex-col">
+        <div class="pl-5 flex sticky h-15 top-15 z-50 bg-[#F5F6F8]">
+            <div class="flex w-25 justify-evenly items-center">
+                <div class="size-6 flex flex-col">
+                    <button id="grid-button">
+                        <img src="grid-icon.svg" alt="" class="size-5" />
+                    </button>
+                    <p class="text-xs text-gray-80">Grid</p>
+                </div>
+                <div class="size-6 flex flex-col">
+                    <button id="list-button">
+                        <img src="list-icon.svg" alt="" class="size-5" />
+                    </button>
+                    <p class="text-xs text-gray-80">List</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="flex min-h-0">
+            <div class="flex-1 bg-[#F5F6F8] px-8 py-3">
+
+                <div id="product-grid"
+                    class="grid gap-3 grid-span-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface aman (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                            <h2>Advance Surface Treatment (AST)</h2>
+                            <p2>DECORATION TECHNOLOGIES</p2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden" id="product-list">
+                    <div class="grid grid-cols-4 text-sm text-gray-500 px-4 py-2">
+                        <span>Product name</span>
+                        <span>Segment</span>
+                        <span>Division</span>
+                        <span></span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div
+                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-sm font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-sm text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-sm font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-sm text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+                        <div
+                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-sm font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-sm text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-sm font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-sm text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
+                <div class="flex justify-center flex-col h-full">
+                    <div class="flex flex-col p-4">
+                        <button class="bg-red-600 hover:bg-red-700 rounded-xl p-2 text-white mb-3 font-bold">
+                            Add Product
+                        </button>
+                        <input id="searchInput"
+                            class="p-2 border border-gray-200 rounded-xl bg-white text-black placeholder-gray-500"
+                            type="text" placeholder="Search Products" />
+                    </div>
+
+                    <div class="flex flex-row justify-evenly p-2">
+                        <button data-tab="all" class="filter-btn bg-black rounded-xs p-2 text-sm text-white">
+                            All
+                        </button>
+                        <button data-tab="divison" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                            By Divison
+                        </button>
+                        <button data-tab="company" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                            By Company
+                        </button>
+                        <button data-tab="segment" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                            By Segment
+                        </button>
+                    </div>
+
+                    <div id="all" class="filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
+                        <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                            <div class="basis-1/3 p-2">
+                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                            </div>
+                            <div class="basis-2/3">
+                                <h3 class="font-bold text-sm">
+                                    Modules & Polymer Products (120)
+                                </h3>
+                                <p class="text-xs">
+                                    aman ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                    omnis quam ipsum. Eius, hic ipsam?r
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                            <div class="basis-1/3 p-2">
+                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                            </div>
+                            <div class="basis-2/3">
+                                <h3 class="font-bold text-sm">
+                                    Modules & Polymer Products (120)
+                                </h3>
+                                <p class="text-xs">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                    omnis quam ipsum. Eius, hic ipsam?r
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                            <div class="basis-1/3 p-2">
+                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                            </div>
+                            <div class="basis-2/3">
+                                <h3 class="font-bold text-sm">
+                                    Modules & Polymer Products (120)
+                                </h3>
+                                <p class="text-xs">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                    omnis quam ipsum. Eius, hic ipsam?r
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                            <div class="basis-1/3 p-2">
+                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                            </div>
+                            <div class="basis-2/3">
+                                <h3 class="font-bold text-sm">
+                                    Modules & Polymer Products (120)
+                                </h3>
+                                <p class="text-xs">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                    omnis quam ipsum. Eius, hic ipsam?r
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="divison"
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
+                        <div class="w-80">
+                            <div class="flex justify-between">
+                                <div>DIVISONS</div>
+                                <div>NO. PRODUCTS</div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="segment"
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
+                        <div class="w-80">
+                            <div class="flex justify-between">
+                                <div>SEGMENT</div>
+                                <div>NO. PRODUCTS</div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="company"
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
+                        <div class="w-80">
+                            <div class="flex justify-between">
+                                <div>COMPANIES</div>
+                                <div>NO. PRODUCTS</div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <input type="checkbox">
+                                        <div class="ml-2">Aerospace</div>
+                                    </div>
+                                    <div>(1)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <div id="all" class="w-80 filter-content">
+        <div class="flex justify-between">
+            <div>ALL</div>
+            <div>NO. PRODUCTS</div>
+        </div>
+        <div class="flex flex-col">
+            <div class="flex justify-between">
+                <div class="flex">
+                    <input type="checkbox">
+                    <div class="ml-2">Aerospace</div>
+                </div>
+                <div>(1)</div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
