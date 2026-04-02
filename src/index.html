@@ -11,19 +11,24 @@
 <body class="bg-[#F5F6F8]">
 
     <nav id="navbar"
-        class="flex justify-between fixed w-full top-0 shadow-lg z-50 h-15 transition-all duration-300 bg-transparent">
+        class="flex justify-between fixed w-full top-0 shadow-red z-50 h-15 transition-all duration-300 bg-transparent">
         <div class="p-3">
             <h1 id="main-heading" class="text-2xl text-white font-bold ">Product Catalogue Management System</h1>
         </div>
-        <div class="p-3 flex justify-between w-30">
-            <img class="size-8" src="bell-icon.svg" alt="" />
-            <img class="size-8" src="profile-icon.svg" alt="" />
+        <div class="flex p-3 justify-between w-30">
+            <button class="cursor-pointer">
+                <img class="size-8 header-action hidden" src="bell-icon.svg" alt="" />
+            </button>
+            <button class="cursor-pointer">
+                <img class="size-8 header-action hidden" src="profile-icon.svg" alt="" />
+            </button>
         </div>
     </nav>
 
-    <div class="h-screen bg-[url('./background.png')] bg-cover relative mb-13">
-        <div class="w-full h-full flex justify-center items-center">
-            <h1 class="text-5xl text-white z-50">Welcome to My Product Catalogue System</h1>
+    <div class="h-screen bg-[url('./background.png')] bg-cover relative mb-13 z-48">
+        <div class="w-full h-full flex items-center justify-center flex-col">
+            <h1 class="text-5xl text-white z-49">Welcome to <br> Product Catalogue Management System</h1>
+            <h3 class="text-white z-49">Scroll to Explore</h3>
         </div>
         <div id="back-img" class="bg-black/80 absolute inset-0"></div>
     </div>
@@ -31,17 +36,32 @@
     <div class="flex flex-col">
         <div class="pl-5 flex sticky h-15 top-15 z-50 bg-[#F5F6F8]">
             <div class="flex w-25 justify-evenly items-center">
-                <div class="size-6 flex flex-col">
-                    <button id="grid-button">
-                        <img src="grid-icon.svg" alt="" class="size-5" />
+                <div class="flex flex-col">
+                    <button id="grid-button" class="text-black cursor-pointer">
+                        <svg class="fill-current" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M41 4H7C5.34315 4 4 5.34315 4 7V41C4 42.6569 5.34315 44 7 44H41C42.6569 44 44 42.6569 44 41V7C44 5.34315 42.6569 4 41 4Z"
+                                stroke="white" stroke-width="4" />
+                            <path d="M24 4L24 44" stroke="white" stroke-width="4" stroke-linecap="round" />
+                            <path d="M4 24H44" stroke="white" stroke-width="4" stroke-linecap="round" />
+                        </svg>
+                        <p class="text-xs text-gray-80">Grid</p>
                     </button>
-                    <p class="text-xs text-gray-80">Grid</p>
                 </div>
-                <div class="size-6 flex flex-col">
-                    <button id="list-button">
-                        <img src="list-icon.svg" alt="" class="size-5" />
+                <div class="flex flex-col text-center">
+                    <button id="list-button" class="text-gray-500 cursor-pointer">
+                        <svg viewBox="0 0 16 16" class="fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M1 5H15V7H1V5Z"></path>
+                                <path d="M1 9H15V11H1V9Z"></path>
+                                <path d="M1 13H15V15H1V13Z"></path>
+                                <path d="M1 1H15V3H1V1Z"></path>
+                            </g>
+                        </svg>
+                        <p class="text-xs text-gray-80">List</p>
                     </button>
-                    <p class="text-xs text-gray-80">List</p>
                 </div>
             </div>
         </div>
@@ -50,10 +70,10 @@
             <div class="flex-1 bg-[#F5F6F8] px-8 py-3">
 
                 <div id="product-grid"
-                    class="grid gap-3 grid-span-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
+                    class="grid gap-4 grid-span-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -62,8 +82,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface aman (AST)</h2>
@@ -72,8 +92,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -82,8 +102,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -92,8 +112,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -102,8 +122,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -112,8 +132,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -122,8 +142,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -132,8 +152,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -142,8 +162,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -152,8 +172,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -162,8 +182,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -172,8 +192,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -182,8 +202,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -192,8 +212,8 @@
                     </div>
 
                     <div
-                        class="group relative border border-gray-200 rounded-lg flex flex-col overflow-hidden text-white size-52 product-item">
-                        <img src="card.jpg" class="w-full h-full object-cover rounded-lg" alt="" />
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
                         <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
                             <h2>Advance Surface Treatment (AST)</h2>
@@ -327,35 +347,34 @@
             </div>
 
             <div class="sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
-                <div class="flex justify-center flex-col h-full">
-                    <div class="flex flex-col p-4">
-                        <button class="bg-red-600 hover:bg-red-700 rounded-xl p-2 text-white mb-3 font-bold">
+                <div class="flex justify-center flex-col h-full p-4 pl-0">
+                    <div class="flex flex-col mb-3">
+                        <button class="bg-red-600 hover:bg-red-700 rounded-3xl p-2 text-white mb-3 font-bold cursor-pointer">
                             Add Product
                         </button>
-                        <input id="searchInput"
-                            class="p-2 border border-gray-200 rounded-xl bg-white text-black placeholder-gray-500"
+                        <input id="searchInput" class="p-2 rounded-xs bg-white text-black placeholder-gray-500"
                             type="text" placeholder="Search Products" />
                     </div>
 
-                    <div class="flex flex-row justify-evenly p-2">
-                        <button data-tab="all" class="filter-btn bg-black rounded-xs p-2 text-sm text-white">
+                    <div class="flex flex-row justify-between mb-4">
+                        <button data-tab="all" class="filter-btn bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
                             All
                         </button>
-                        <button data-tab="divison" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                        <button data-tab="divison" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Divison
                         </button>
-                        <button data-tab="company" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                        <button data-tab="company" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Company
                         </button>
-                        <button data-tab="segment" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600">
+                        <button data-tab="segment" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Segment
                         </button>
                     </div>
 
-                    <div id="all" class="filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
+                    <div id="all" class="filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600">
                         <div class="flex bg-white h-30 w-full mb-2 p-2 ">
                             <div class="basis-1/3 p-2">
-                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                                <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
                             </div>
                             <div class="basis-2/3">
                                 <h3 class="font-bold text-sm">
@@ -370,7 +389,7 @@
                         </div>
                         <div class="flex bg-white h-30 w-full mb-2 p-2 ">
                             <div class="basis-1/3 p-2">
-                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                                <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
                             </div>
                             <div class="basis-2/3">
                                 <h3 class="font-bold text-sm">
@@ -385,7 +404,7 @@
                         </div>
                         <div class="flex bg-white h-30 w-full mb-2 p-2 ">
                             <div class="basis-1/3 p-2">
-                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                                <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
                             </div>
                             <div class="basis-2/3">
                                 <h3 class="font-bold text-sm">
@@ -400,7 +419,7 @@
                         </div>
                         <div class="flex bg-white h-30 w-full mb-2 p-2 ">
                             <div class="basis-1/3 p-2">
-                                <img src="card.jpg" alt="" class="rounded-xl w-full h-full object-cover" />
+                                <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
                             </div>
                             <div class="basis-2/3">
                                 <h3 class="font-bold text-sm">
@@ -416,9 +435,9 @@
                     </div>
 
                     <div id="divison"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
-                        <div class="w-80">
-                            <div class="flex justify-between">
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                        <div class="w-full">
+                            <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>DIVISONS</div>
                                 <div>NO. PRODUCTS</div>
                             </div>
@@ -434,9 +453,9 @@
                         </div>
                     </div>
                     <div id="segment"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
-                        <div class="w-80">
-                            <div class="flex justify-between">
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                        <div class="w-full">
+                            <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>SEGMENT</div>
                                 <div>NO. PRODUCTS</div>
                             </div>
@@ -632,9 +651,9 @@
                         </div>
                     </div>
                     <div id="company"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 p-3 text-gray-600 mr-4">
-                        <div class="w-80">
-                            <div class="flex justify-between">
+                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                        <div class="w-full">
+                            <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>COMPANIES</div>
                                 <div>NO. PRODUCTS</div>
                             </div>
