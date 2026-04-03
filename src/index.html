@@ -12,10 +12,12 @@
 
     <nav id="navbar"
         class="flex justify-between fixed w-full top-0 shadow-red z-50 h-15 transition-all duration-300 bg-transparent">
-        <div class="p-3">
+        <div class="p-3 flex w-[40%] justify-center">
+            <img src="logo.png" alt="">
             <h1 id="main-heading" class="text-2xl text-white font-bold ">Product Catalogue Management System</h1>
         </div>
-        <div class="flex p-3 justify-between w-30">
+        <div class="flex-1"></div>
+        <div class="flex p-3 w-[10%] justify-evenly">
             <button class="cursor-pointer">
                 <img class="size-8 header-action hidden" src="bell-icon.svg" alt="" />
             </button>
@@ -25,20 +27,25 @@
         </div>
     </nav>
 
-    <div class="h-screen bg-[url('./background.png')] bg-cover relative mb-13 z-48">
-        <div class="w-full h-full flex items-center justify-center flex-col">
-            <h1 class="text-5xl text-white z-49">Welcome to <br> Product Catalogue Management System</h1>
-            <h3 class="text-white z-49">Scroll to Explore</h3>
+    <div class="h-screen bg-[url('./background.png')] bg-cover mb-13 z-48">
+        <div class="w-full h-full flex flex-col z-49 text-white items-center">
+            <div class="z-49 basis-1/2 flex items-center">
+                <h1 class="text-5xl text-center">Welcome to <br> Product Catalogue Management System
+                </h1>
+            </div>
+            <div class="z-49 flex-1 flex items-center">
+                <h3>Scroll to Explore</h3>
+            </div>
         </div>
         <div id="back-img" class="bg-black/80 absolute inset-0"></div>
     </div>
 
     <div class="flex flex-col">
-        <div class="pl-5 flex sticky h-15 top-15 z-50 bg-[#F5F6F8]">
-            <div class="flex w-25 justify-evenly items-center">
+        <div class="flex sticky h-15 top-15 z-50 bg-[#F5F6F8]">
+            <div class="flex items-center ml-8 w-17 justify-between">
                 <div class="flex flex-col">
                     <button id="grid-button" class="text-black cursor-pointer">
-                        <svg class="fill-current" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-current size-7" viewBox="4 4 40 40" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M41 4H7C5.34315 4 4 5.34315 4 7V41C4 42.6569 5.34315 44 7 44H41C42.6569 44 44 42.6569 44 41V7C44 5.34315 42.6569 4 41 4Z"
                                 stroke="white" stroke-width="4" />
@@ -48,9 +55,9 @@
                         <p class="text-xs text-gray-80">Grid</p>
                     </button>
                 </div>
-                <div class="flex flex-col text-center">
+                <div class="flex flex-col">
                     <button id="list-button" class="text-gray-500 cursor-pointer">
-                        <svg viewBox="0 0 16 16" class="fill-current" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 16 16" class="fill-current size-7" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
