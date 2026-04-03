@@ -2,6 +2,7 @@ const navbar = document.getElementById("navbar");
 const heading = document.getElementById("main-heading");
 const backImg = document.getElementById("back-img");
 const headerAction = document.querySelectorAll(".header-action");
+const headerLogo = document.getElementById("header-logo");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 1) {
@@ -16,6 +17,9 @@ window.addEventListener("scroll", () => {
     backImg.classList.add("bg-black/60");
     
     headerAction.forEach(c => c.classList.remove("hidden"));
+    
+    headerLogo.classList.remove("text-white");
+    headerLogo.classList.add("text-red-500");
 
   } else {
     backImg.classList.remove("bg-black/60");
@@ -30,6 +34,8 @@ window.addEventListener("scroll", () => {
 
     headerAction.forEach(c => c.classList.add("hidden"));
 
+    headerLogo.classList.remove("text-red-500");
+    headerLogo.classList.add("text-white");
   }
 });
 

@@ -11,9 +11,49 @@
 <body class="bg-[#F5F6F8]">
 
     <nav id="navbar"
-        class="flex justify-between fixed w-full top-0 shadow-red z-50 h-15 transition-all duration-300 bg-transparent">
-        <div class="p-3 flex w-[40%] justify-center">
-            <img src="logo.png" alt="">
+        class="flex justify-between fixed w-full top-0 z-50 h-15 transition-all duration-300 bg-transparent">
+        <div class="p-3 flex w-[40%] justify-center items-center">
+            <div class="text-white mr-2" id="header-logo">
+                <svg class="size-9 fill-current" viewBox="24 24 132 122" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- ===== TOP CUBE ===== -->
+                    <polygon points="90,30 120,45 90,60 60,45" />
+                    <polygon points="60,45 90,60 90,90 60,75" />
+                    <polygon points="90,60 120,45 120,75 90,90" />
+
+                    <!-- ===== LEFT BOTTOM CUBE ===== -->
+                    <polygon points="60,75 90,90 60,105 30,90" />
+                    <polygon points="30,90 60,105 60,135 30,120" />
+                    <polygon points="60,105 90,90 90,120 60,135" />
+
+                    <!-- ===== RIGHT BOTTOM CUBE ===== -->
+                    <polygon points="120,75 150,90 120,105 90,90" />
+                    <polygon points="90,90 120,105 120,135 90,120" />
+                    <polygon points="120,105 150,90 150,120 120,135" />
+
+                    <!-- ===== BLACK OUTLINES ===== -->
+                    <g stroke="#000000" stroke-width="5" fill="none" stroke-linejoin="round">
+
+                        <!-- Top cube -->
+                        <polygon points="90,30 120,45 90,60 60,45 90,30" />
+                        <polygon points="60,45 60,75 90,90 90,60" />
+                        <polygon points="90,60 120,45 120,75 90,90" />
+
+                        <!-- Left cube -->
+                        <polygon points="60,75 90,90 60,105 30,90 60,75" />
+                        <polygon points="30,90 30,120 60,135 60,105" />
+                        <polygon points="60,105 90,90 90,120 60,135" />
+
+                        <!-- Right cube -->
+                        <polygon points="120,75 150,90 120,105 90,90 120,75" />
+                        <polygon points="90,90 120,105 120,135 90,120" />
+                        <polygon points="120,105 150,90 150,120 120,135" />
+
+                    </g>
+
+                </svg>
+            </div>
+
             <h1 id="main-heading" class="text-2xl text-white font-bold ">Product Catalogue Management System</h1>
         </div>
         <div class="flex-1"></div>
@@ -30,11 +70,36 @@
     <div class="h-screen bg-[url('./background.png')] bg-cover mb-13 z-48">
         <div class="w-full h-full flex flex-col z-49 text-white items-center">
             <div class="z-49 basis-1/2 flex items-center">
-                <h1 class="text-5xl text-center">Welcome to <br> Product Catalogue Management System
+                <h1 class="text-5xl text-center">Welcome to <br>
+                    <span class="text-red-500 font-bold">Product Catalogue</span>
+                    Management System
                 </h1>
             </div>
-            <div class="z-49 flex-1 flex items-center">
-                <h3>Scroll to Explore</h3>
+            <div class="flex-1 flex items-center">
+                <div class="flex flex-col z-49 justify-center items-center">
+                    <h3 class="mb-10">Scroll to Explore</h3>
+                    <div class="z-49 animate-flow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 220" class="w-6 h-48">
+
+                            <defs>
+                                <linearGradient id="fadeLine" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-opacity="0" />
+                                    <stop offset="50%" stop-opacity="1" />
+                                    <stop offset="100%" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- base faint line -->
+                            <line x1="12" y1="6" x2="12" y2="170" stroke="red" stroke-width="3" opacity="0.3" />
+
+                            <!-- animated fading overlay -->
+                            <line x1="12" y1="6" x2="12" y2="170" stroke="red" stroke-width="3" class="animate-flow" />
+
+                            <!-- arrow head -->
+                            <path d="M8 158 L12 170 L16 158" stroke="white" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="back-img" class="bg-black/80 absolute inset-0"></div>
@@ -356,7 +421,8 @@
             <div class="sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
                 <div class="flex justify-center flex-col h-full p-4 pl-0">
                     <div class="flex flex-col mb-3">
-                        <button class="bg-red-600 hover:bg-red-700 rounded-3xl p-2 text-white mb-3 font-bold cursor-pointer">
+                        <button
+                            class="bg-red-600 hover:bg-red-700 rounded-3xl p-2 text-white mb-3 font-bold cursor-pointer">
                             Add Product
                         </button>
                         <input id="searchInput" class="p-2 rounded-xs bg-white text-black placeholder-gray-500"
@@ -364,16 +430,20 @@
                     </div>
 
                     <div class="flex flex-row justify-between mb-4">
-                        <button data-tab="all" class="filter-btn bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
+                        <button data-tab="all"
+                            class="filter-btn bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
                             All
                         </button>
-                        <button data-tab="divison" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="divison"
+                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Divison
                         </button>
-                        <button data-tab="company" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="company"
+                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Company
                         </button>
-                        <button data-tab="segment" class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="segment"
+                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Segment
                         </button>
                     </div>

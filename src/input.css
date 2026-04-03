@@ -28,3 +28,23 @@
   scrollbar-width: thin;
   scrollbar-color: #9ca3af transparent;
 }
+
+@layer utilities {
+  .animate-flow {
+    animation: flow 2s linear infinite;
+  }
+
+  @keyframes flow {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+  }
+}
