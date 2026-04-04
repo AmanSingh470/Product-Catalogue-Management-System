@@ -12,9 +12,9 @@
 
     <nav id="navbar"
         class="flex justify-between fixed w-full top-0 z-50 h-15 transition-all duration-300 bg-transparent">
-        <div class="p-3 flex w-[40%] justify-center items-center">
+        <div class="p-3 flex justify-center items-center">
             <div class="text-white mr-2" id="header-logo">
-                <svg class="size-9 fill-current" viewBox="24 24 132 122" xmlns="http://www.w3.org/2000/svg">
+                <svg class="size-6 fill-current" viewBox="24 24 132 122" xmlns="http://www.w3.org/2000/svg">
 
                     <!-- ===== TOP CUBE ===== -->
                     <polygon points="90,30 120,45 90,60 60,45" />
@@ -54,10 +54,10 @@
                 </svg>
             </div>
 
-            <h1 id="main-heading" class="text-2xl text-white font-bold ">Product Catalogue Management System</h1>
+            <h1 id="main-heading" class="text-md text-white font-bold ">Product Catalogue Management System</h1>
         </div>
         <div class="flex-1"></div>
-        <div class="flex p-3 w-[10%] justify-evenly">
+        <div class="flex p-3 w-[20%] justify-evenly">
             <button class="cursor-pointer">
                 <img class="size-8 header-action hidden" src="bell-icon.svg" alt="" />
             </button>
@@ -69,15 +69,15 @@
 
     <div class="h-screen bg-[url('./background.png')] bg-cover mb-13 z-48">
         <div class="w-full h-full flex flex-col z-49 text-white items-center">
-            <div class="z-49 basis-1/2 flex items-center">
-                <h1 class="text-5xl text-center">Welcome to <br>
+            <div class="z-49 basis-3/4 flex items-center">
+                <h1 class="text-3xl text-center">Welcome to <br>
                     <span class="text-red-500 font-bold">Product Catalogue</span>
                     Management System
                 </h1>
             </div>
             <div class="flex-1 flex items-center">
                 <div class="flex flex-col z-49 justify-center items-center">
-                    <h3 class="mb-10">Scroll to Explore</h3>
+                    <h3 class="mb-10 text-sm">Scroll to Explore</h3>
                     <div class="z-49 animate-flow">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 220" class="w-6 h-48">
 
@@ -142,7 +142,7 @@
             <div class="flex-1 bg-[#F5F6F8] px-8 py-3">
 
                 <div id="product-grid"
-                    class="grid gap-4 grid-span-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
+                    class="grid gap-4 grid-span-full grid-cols-1 lg:grid-cols-4 bg-[#F5F6F8]">
                     <div
                         class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
@@ -418,7 +418,7 @@
 
             </div>
 
-            <div class="sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
+            <div class="hidden sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
                 <div class="flex justify-center flex-col h-full p-4 pl-0">
                     <div class="flex flex-col mb-3">
                         <button
