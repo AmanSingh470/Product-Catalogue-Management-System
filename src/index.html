@@ -14,7 +14,7 @@
         class="flex justify-between fixed w-full top-0 z-50 h-15 transition-all duration-300 bg-transparent">
         <div class="p-3 flex justify-center items-center">
             <div class="text-white mr-2" id="header-logo">
-                <svg class="size-6 fill-current" viewBox="24 24 132 122" xmlns="http://www.w3.org/2000/svg">
+                <svg class="size-6 2xl:size-15 fill-current" viewBox="24 24 132 122" xmlns="http://www.w3.org/2000/svg">
 
                     <!-- ===== TOP CUBE ===== -->
                     <polygon points="90,30 120,45 90,60 60,45" />
@@ -54,15 +54,15 @@
                 </svg>
             </div>
 
-            <h1 id="main-heading" class="text-md text-white font-bold ">Product Catalogue Management System</h1>
+            <h1 id="main-heading" class="text-xs 2xl:text-5xl text-white font-bold ">Product Catalogue Management System</h1>
         </div>
         <div class="flex-1"></div>
         <div class="flex p-3 w-[20%] justify-evenly">
             <button class="cursor-pointer">
-                <img class="size-8 header-action hidden" src="bell-icon.svg" alt="" />
+                <img class="size-6 header-action hidden" src="bell-icon.svg" alt="" />
             </button>
             <button class="cursor-pointer">
-                <img class="size-8 header-action hidden" src="profile-icon.svg" alt="" />
+                <img class="size-6 header-action hidden" src="profile-icon.svg" alt="" />
             </button>
         </div>
     </nav>
@@ -70,7 +70,7 @@
     <div class="h-screen bg-[url('./background.png')] bg-cover mb-13 z-48">
         <div class="w-full h-full flex flex-col z-49 text-white items-center">
             <div class="z-49 basis-3/4 flex items-center">
-                <h1 class="text-3xl text-center">Welcome to <br>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center">Welcome to <br>
                     <span class="text-red-500 font-bold">Product Catalogue</span>
                     Management System
                 </h1>
@@ -107,10 +107,10 @@
 
     <div class="flex flex-col">
         <div class="flex sticky h-15 top-15 z-50 bg-[#F5F6F8]">
-            <div class="flex items-center ml-8 w-17 justify-between">
+            <div class="flex items-center ml-8 w-14 justify-between">
                 <div class="flex flex-col">
                     <button id="grid-button" class="text-black cursor-pointer">
-                        <svg class="fill-current size-7" viewBox="4 4 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-current size-5" viewBox="4 4 40 40" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M41 4H7C5.34315 4 4 5.34315 4 7V41C4 42.6569 5.34315 44 7 44H41C42.6569 44 44 42.6569 44 41V7C44 5.34315 42.6569 4 41 4Z"
                                 stroke="white" stroke-width="4" />
@@ -122,7 +122,7 @@
                 </div>
                 <div class="flex flex-col">
                     <button id="list-button" class="text-gray-500 cursor-pointer">
-                        <svg viewBox="0 0 16 16" class="fill-current size-7" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 16 16" class="fill-current size-5" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -142,152 +142,152 @@
             <div class="flex-1 bg-[#F5F6F8] px-8 py-3">
 
                 <div id="product-grid"
-                    class="grid gap-4 grid-span-full grid-cols-1 lg:grid-cols-4 bg-[#F5F6F8]">
+                    class="grid gap-4 grid-span-full grid-cols-2 lg:grid-cols-4 bg-[#F5F6F8]">
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item sm:h-50">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface aman (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
                     </div>
 
                     <div
-                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-52 product-item">
+                        class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-35 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-300"></div>
-                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-sm">
+                        <div class="absolute flex flex-col justify-center bottom-3 left-1 p-2 text-xs">
                             <h2>Advance Surface Treatment (AST)</h2>
                             <p2>DECORATION TECHNOLOGIES</p2>
                         </div>
@@ -304,7 +304,62 @@
 
                     <div class="space-y-2">
                         <div
-                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+                            class="grid grid-cols-1 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-xs font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-xs text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="grid grid-cols-1 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+
+                            <!-- Product -->
+                            <div class="flex items-center gap-3">
+                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
+                                <span class="text-sm font-medium text-gray-800">
+                                    Advanced Surface Treatment (AST)
+                                </span>
+                            </div>
+
+                            <!-- Segment -->
+                            <div class="text-sm text-gray-500">
+                                Decoration technologies
+                            </div>
+
+                            <!-- Division -->
+                            <div class="text-sm text-gray-500">
+                                Vision Systems
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-end text-gray-400">
+                                >
+                            </div>
+
+                        </div>
+                        <div
+                            class="grid grid-cols-1 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
 
                             <!-- Product -->
                             <div class="flex items-center gap-3">
@@ -332,62 +387,7 @@
                         </div>
 
                         <div
-                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
-
-                            <!-- Product -->
-                            <div class="flex items-center gap-3">
-                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
-                                <span class="text-sm font-medium text-gray-800">
-                                    Advanced Surface Treatment (AST)
-                                </span>
-                            </div>
-
-                            <!-- Segment -->
-                            <div class="text-sm text-gray-500">
-                                Decoration technologies
-                            </div>
-
-                            <!-- Division -->
-                            <div class="text-sm text-gray-500">
-                                Vision Systems
-                            </div>
-
-                            <!-- Arrow -->
-                            <div class="flex justify-end text-gray-400">
-                                >
-                            </div>
-
-                        </div>
-                        <div
-                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
-
-                            <!-- Product -->
-                            <div class="flex items-center gap-3">
-                                <img src="card.jpg" class="w-10 h-10 rounded object-cover" />
-                                <span class="text-sm font-medium text-gray-800">
-                                    Advanced Surface Treatment (AST)
-                                </span>
-                            </div>
-
-                            <!-- Segment -->
-                            <div class="text-sm text-gray-500">
-                                Decoration technologies
-                            </div>
-
-                            <!-- Division -->
-                            <div class="text-sm text-gray-500">
-                                Vision Systems
-                            </div>
-
-                            <!-- Arrow -->
-                            <div class="flex justify-end text-gray-400">
-                                >
-                            </div>
-
-                        </div>
-
-                        <div
-                            class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
+                            class="grid grid-cols-1 items-center bg-white rounded-lg px-4 py-3 shadow-sm hover:bg-gray-50 transition">
 
                             <!-- Product -->
                             <div class="flex items-center gap-3">
@@ -418,7 +418,7 @@
 
             </div>
 
-            <div class="hidden sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
+            <div class="hidden sm:block md:block lg:block xl:block 2xl:block sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
                 <div class="flex justify-center flex-col h-full p-4 pl-0">
                     <div class="flex flex-col mb-3">
                         <button
