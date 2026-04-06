@@ -142,3 +142,40 @@ filterButtons.forEach(btn => {
 
   });
 });
+
+// ===== MODAL LOGIC (ONLY FOR SMALL DEVICES) =====
+const floatingFilterModal = document.getElementById("fullscreenModal");
+const floatingFilterModalContent = document.getElementById("modalContent");
+const floatingFilterModalTitle = document.getElementById("modalTitle");
+const floatingFilterModalclose = document.getElementById("closeModal");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // ONLY run modal on small screens
+    if (window.innerWidth >= 1024) return; // lg breakpoint
+    if(btn.dataset.tab == "all"){
+      return;
+    }
+    const targetId = btn.dataset.tab;
+    const filterContent = document.getElementById(targetId);
+
+    filterModalTitle.innerText = btn.innerText;
+    filterModalContent.innerHTML = filterContent.innerHTML;
+
+    filterModal.classList.remove("hidden");
+    filterModal.classList.add("flex");
+  });
+});
+
+// close modal on cross
+closeFilterModal.addEventListener("click", () => {
+  filterModal.classList.remove("flex");
+  filterModal.classList.add("hidden");
+});
+
+// show results button
+document.getElementById("applyFiltersBtn").addEventListener("click", () => {
+  filterModal.classList.remove("flex");
+  filterModal.classList.add("hidden");
+});
