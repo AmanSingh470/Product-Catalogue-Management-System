@@ -3,6 +3,8 @@ const heading = document.getElementById("main-heading");
 const backImg = document.getElementById("back-img");
 const headerAction = document.querySelectorAll(".header-action");
 const headerLogo = document.getElementById("header-logo");
+const gridListFloating = document.getElementById("grid-list-floating");
+const heroSection = document.getElementById("hero-section");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 1) {
@@ -37,10 +39,21 @@ window.addEventListener("scroll", () => {
     headerLogo.classList.remove("text-red-500");
     headerLogo.classList.add("text-white");
   }
+  const heroBottom = heroSection.offsetHeight;
+  if(window.scrollY > heroBottom-500){
+    gridListFloating.classList.remove("hidden");
+    gridListFloating.classList.add("block");
+  }
+  else{
+    gridListFloating.classList.add("hidden");
+    gridListFloating.classList.remove("block");
+  }
 });
 
 const gridButton = document.getElementById("grid-button");
 const listButton = document.getElementById("list-button");
+const floatingGridButton = document.getElementById("floating-grid-btn");
+const floatingListButton = document.getElementById("floating-list-btn");
 const productGrid = document.getElementById("product-grid")
 const productList = document.getElementById("product-list")
 
@@ -58,11 +71,32 @@ listButton.addEventListener("click", () => {
   productGrid.classList.add("hidden");
   productList.classList.remove("hidden");
 
-  listButton.classList.remove('text-gray-500');
-  listButton.classList.add('text-black');
-
   gridButton.classList.remove('text-black');
   gridButton.classList.add('text-gray-500');
+
+  listButton.classList.remove('text-gray-500');
+  listButton.classList.add('text-black');
+});
+
+floatingGridButton.addEventListener("click", () => {
+  productList.classList.add("hidden");
+  productGrid.classList.remove("hidden");
+
+  floatingGridButton.classList.remove('text-gray-500');
+  floatingGridButton.classList.add('text-black');
+
+  floatingListButton.classList.remove('text-black');
+  floatingListButton.classList.add('text-gray-500');
+});
+floatingListButton.addEventListener("click", () => {
+  productGrid.classList.add("hidden");
+  productList.classList.remove("hidden");
+  
+  floatingGridButton.classList.remove('text-black');
+  floatingGridButton.classList.add('text-gray-500');
+
+  floatingListButton.classList.remove('text-gray-500');
+  floatingListButton.classList.add('text-black');
 });
 
 const searchInput = document.getElementById("searchInput");
