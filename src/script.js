@@ -50,53 +50,54 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const gridButton = document.getElementById("grid-button");
-const listButton = document.getElementById("list-button");
-const floatingGridButton = document.getElementById("floating-grid-btn");
-const floatingListButton = document.getElementById("floating-list-btn");
+const largeGridButton = document.getElementById("large-grid-button");
+const largeListButton = document.getElementById("large-list-button");
 const productGrid = document.getElementById("product-grid")
 const productList = document.getElementById("product-list")
 
-gridButton.addEventListener("click", () => {
+largeGridButton.addEventListener("click", () => {
   productList.classList.add("hidden");
   productGrid.classList.remove("hidden");
 
-  gridButton.classList.remove('text-gray-500');
-  gridButton.classList.add('text-black');
+  largeGridButton.classList.remove('text-gray-500');
+  largeGridButton.classList.add('text-black');
 
-  listButton.classList.remove('text-black');
-  listButton.classList.add('text-gray-500');
+  largeListButton.classList.remove('text-black');
+  largeListButton.classList.add('text-gray-500');
 });
-listButton.addEventListener("click", () => {
+largeListButton.addEventListener("click", () => {
   productGrid.classList.add("hidden");
   productList.classList.remove("hidden");
 
-  gridButton.classList.remove('text-black');
-  gridButton.classList.add('text-gray-500');
+  largeGridButton.classList.remove('text-black');
+  largeGridButton.classList.add('text-gray-500');
 
-  listButton.classList.remove('text-gray-500');
-  listButton.classList.add('text-black');
+  largeListButton.classList.remove('text-gray-500');
+  largeListButton.classList.add('text-black');
 });
 
-floatingGridButton.addEventListener("click", () => {
+const smallGridButton = document.getElementById("small-grid-btn");
+const smallListButton = document.getElementById("small-list-btn");
+
+smallGridButton.addEventListener("click", () => {
   productList.classList.add("hidden");
   productGrid.classList.remove("hidden");
 
-  floatingGridButton.classList.remove('text-gray-500');
-  floatingGridButton.classList.add('text-black');
+  smallGridButton.classList.remove('text-gray-500');
+  smallGridButton.classList.add('text-black');
 
-  floatingListButton.classList.remove('text-black');
-  floatingListButton.classList.add('text-gray-500');
+  smallListButton.classList.remove('text-black');
+  smallListButton.classList.add('text-gray-500');
 });
-floatingListButton.addEventListener("click", () => {
+smallListButton.addEventListener("click", () => {
   productGrid.classList.add("hidden");
   productList.classList.remove("hidden");
   
-  floatingGridButton.classList.remove('text-black');
-  floatingGridButton.classList.add('text-gray-500');
+  smallGridButton.classList.remove('text-black');
+  smallGridButton.classList.add('text-gray-500');
 
-  floatingListButton.classList.remove('text-gray-500');
-  floatingListButton.classList.add('text-black');
+  smallListButton.classList.remove('text-gray-500');
+  smallListButton.classList.add('text-black');
 });
 
 const searchInput = document.getElementById("searchInput");
@@ -116,22 +117,22 @@ searchInput.addEventListener("input", () => {
   });
 });
 
-const filterButtons = document.querySelectorAll(".filter-btn");
-const contents = document.querySelectorAll(".filter-content");
+const largeFilterButtons = document.querySelectorAll(".large-filter-btn");
+let filterContents = document.querySelectorAll(".filter-content");
 
-filterButtons.forEach(btn => {
+largeFilterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
 
     const target = btn.dataset.tab;
 
     // hide all content
-    contents.forEach(c => c.classList.add("hidden"));
+    filterContents.forEach(c => c.classList.add("hidden"));
 
     // show selected content
     document.getElementById(target).classList.remove("hidden");
 
     // reset all buttons
-    filterButtons.forEach(b => {
+    largeFilterButtons.forEach(b => {
       b.classList.remove("bg-black", "text-white");
       b.classList.add("bg-white", "text-gray-600");
     });
@@ -144,12 +145,13 @@ filterButtons.forEach(btn => {
 });
 
 // ===== MODAL LOGIC (ONLY FOR SMALL DEVICES) =====
-const floatingFilterModal = document.getElementById("fullscreenModal");
-const floatingFilterModalContent = document.getElementById("modalContent");
-const floatingFilterModalTitle = document.getElementById("modalTitle");
-const floatingFilterModalclose = document.getElementById("closeModal");
+const smallfilterButtons = document.getElementsByClassName('.small-filter-buttons');
+const smallFilterModal = document.getElementById("small-filter-modal");
+const smallFilterModalContent = document.getElementById("small-filter-modal-content");
+const smallFilterModalTitle = document.getElementById("small-filter-modal-title");
+const smallFilterModalCloseBtn = document.getElementById("small-filter-modal-close-btn");
 
-filterButtons.forEach(btn => {
+smallfilterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
 
     // ONLY run modal on small screens
@@ -158,24 +160,25 @@ filterButtons.forEach(btn => {
       return;
     }
     const targetId = btn.dataset.tab;
-    const filterContent = document.getElementById(targetId);
+    let filterContent = document.getElementById(targetId);
 
-    filterModalTitle.innerText = btn.innerText;
-    filterModalContent.innerHTML = filterContent.innerHTML;
+    smallFilterModalTitle.innerText = btn.innerText;
+    smallFilterModalContent.innerHTML = filterContent.innerHTML;
 
-    filterModal.classList.remove("hidden");
-    filterModal.classList.add("flex");
+    smallFilterModal.classList.remove("hidden");
+    smallFilterModal.classList.add("flex");
   });
 });
 
 // close modal on cross
-closeFilterModal.addEventListener("click", () => {
-  filterModal.classList.remove("flex");
-  filterModal.classList.add("hidden");
+smallFilterModalCloseBtn.addEventListener("click", () => {
+  smallFilterModal.classList.remove("flex");
+  smallFilterModal.classList.add("hidden");
 });
 
 // show results button
-document.getElementById("applyFiltersBtn").addEventListener("click", () => {
-  filterModal.classList.remove("flex");
-  filterModal.classList.add("hidden");
+const applyFiltersBtn = document.getElementById("apply-filters");
+applyFiltersBtn.addEventListener("click", () => {
+  smallFilterModal.classList.remove("flex");
+  smallFilterModal.classList.add("hidden");
 });
