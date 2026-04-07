@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="output.css" />
 </head>
 
-<div id="small-filter-modal" class="fixed inset-0 z-[9999] hidden bg-white flex flex-col">
+<div id="small-filter-modal" class="fixed inset-0 z-9999 hidden bg-white flex flex-col">
 
     <!-- Header -->
     <div class="flex justify-between items-center p-4 border-b bg-white sticky top-0 z-10">
@@ -21,33 +21,119 @@
 
     <!-- Bottom Button -->
     <div class="fixed bottom-0 left-0 w-full bg-white border-t p-4">
-        <button id="applyFiltersBtn"
-            class="w-full bg-red-500 text-white py-3 rounded-lg font-bold">
+        <button id="apply-filters-btn" class="w-full bg-red-500 text-white py-3 rounded-lg font-bold">
             Show Results
         </button>
     </div>
 
 </div>
 
-<div id="addProductModal" class="fixed inset-0 z-[9999] hidden bg-black/50 flex items-center justify-center">
+<div id="large-add-product-modal" class="fixed inset-0 z-9999 hidden bg-black/50 items-center justify-center">
 
     <!-- Popup Box -->
-    <div class="bg-white w-[95%] max-w-md rounded-xl shadow-xl flex flex-col max-h-[90vh]">
+    <div class="bg-white w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 h-full lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] rounded-xl shadow-xl flex flex-col">
 
         <!-- Header -->
         <div class="flex justify-between items-center p-4 border-b">
-            <h2 id="addProductModalTitle" class="text-lg font-bold"></h2>
-            <button id="closeAddProductModal" class="text-2xl font-bold">&times;</button>
+            <h2 id="addProductModalTitle" class="text-lg font-bold">Add Product</h2>
+            <button id="close-large-add-product-modal" class="text-2xl font-bold">&times;</button>
         </div>
 
         <!-- Content -->
-        <div id="addProductModalContent" class="overflow-y-auto p-4 flex-1"></div>
+        <div id="large-add-product-modal-content" class="overflow-y-auto p-4 flex-1">
+            <form id="add-product-form" class="space-y-5">
+
+                <!-- Title -->
+                <div>
+                    <label class="text-sm font-medium text-gray-700">
+                        Title
+                    </label>
+                    <p class="text-xs text-gray-400 mb-1">Brand Vehicle product name</p>
+
+                    <div class="relative">
+                        <input type="text"
+                            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
+                            placeholder="Title" />
+                        <span class="absolute right-3 top-2 text-xs text-gray-400">0/100 characters</span>
+                    </div>
+                </div>
+
+                <!-- Grid Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <!-- Category -->
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">
+                            Category<span class="text-red-500">*</span>
+                        </label>
+                        <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-600">
+                            <option>Choose category</option>
+                        </select>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">
+                            Company<span class="text-red-500">*</span>
+                        </label>
+                        <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-600">
+                            <option>Choose company</option>
+                        </select>
+                    </div>
+
+                    <!-- Division -->
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">
+                            Division<span class="text-red-500">*</span>
+                        </label>
+                        <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-600">
+                            <option>Choose division</option>
+                        </select>
+                    </div>
+
+                    <!-- Segment -->
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">
+                            Segment<span class="text-red-500">*</span>
+                        </label>
+                        <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-600">
+                            <option>Choose segment</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <label class="text-sm font-medium text-gray-700">
+                        Description<span class="text-red-500">*</span>
+                    </label>
+
+                    <!-- Toolbar -->
+                    <div
+                        class="border border-gray-300 rounded-t-md px-3 py-2 flex gap-3 text-sm text-gray-600 bg-gray-50">
+                        <button type="button" class="font-bold">B</button>
+                        <button type="button" class="italic">I</button>
+                        <button type="button" class="underline">U</button>
+                        <button type="button">S</button>
+                        <button type="button">•</button>
+                        <button type="button">1.</button>
+                        <button type="button">≡</button>
+                    </div>
+
+                    <!-- Textarea -->
+                    <textarea
+                        class="w-full border border-t-0 border-gray-300 rounded-b-md px-3 py-2 h-40 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                </div>
+
+            </form>
+
+        </div>
 
         <!-- Footer -->
         <div class="p-4 border-t">
-            <button id="applyAddProductModalBtn"
-                class="w-full bg-red-500 text-white py-3 rounded-lg font-bold">
-                Show Results
+            <button id="applyAddProductModalBtn" class="w-full bg-red-500 text-white py-3 rounded-lg font-bold">
+                Submit
             </button>
         </div>
 
@@ -58,7 +144,7 @@
 <body class="bg-[#F5F6F8]">
 
     <div id="small-grid-list"
-        class="md:hidden xl:hidden 2xl:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-white rounded-full shadow-lg px-4 py-2 flex items-center gap-6">
+        class="lg:hidden xl:hidden 2xl:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-white rounded-full shadow-lg px-4 py-2 flex items-center gap-6">
 
         <button id="small-grid-btn" class="flex items-center gap-2 text-black">
             <svg class="fill-current size-5" viewBox="4 4 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +171,7 @@
             <span class="text-sm">List</span>
         </button>
 
-        <button class="bg-red-500 rounded-2xl">
+        <button class="bg-red-500 rounded-2xl" id="small-add-product-btn">
             <svg class="size-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -147,7 +233,9 @@
                 </svg>
             </div>
 
-            <h1 id="main-heading" class="text-xs 2xl:text-2xl text-white font-bold ">Product Catalogue Management System
+            <h1 id="main-heading"
+                class="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl text-white font-bold ">
+                Product Catalogue Management System
             </h1>
         </div>
         <div class="flex-1"></div>
@@ -233,25 +321,25 @@
             </div>
         </div>
 
-        <div class="lg:hidden xl:hidden 2xl:hidden flex flex-col sticky h-35 md:h-32 top-15 z-50 bg-[#F5F6F8] m-2">
+        <div class="flex lg:hidden xl:hidden 2xl:hidden flex-col sticky h-35 md:h-32 top-15 z-50 bg-[#F5F6F8] m-2">
 
-            <input id="searchInput" class="mt-5 mb-3 p-2 rounded-xs bg-white text-black placeholder-gray-500"
+            <input id="small-search-input" class="mt-5 mb-3 p-2 rounded-xs bg-white text-black placeholder-gray-500"
                 type="text" placeholder="Search Products" />
             <div class="flex justify-evenly mb-4">
-                <button data-tab="all"
-                    class="m-1 flex-auto large-filter-btn bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
+                <button data-tab="small-filter-all"
+                    class="small-filter-buttons m-1 flex-auto small-filter-btn  bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
                     All
                 </button>
-                <button data-tab="divison"
-                    class="m-1 flex-auto large-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                <button data-tab="small-filter-divison"
+                    class="small-filter-buttons m-1 flex-auto small-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                     By Divison
                 </button>
-                <button data-tab="company"
-                    class="m-1 flex-auto large-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                <button data-tab="small-filter-company"
+                    class="small-filter-buttons m-1 flex-auto small-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                     By Company
                 </button>
-                <button data-tab="segment"
-                    class="m-1 flex-auto large-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                <button data-tab="small-filter-segment"
+                    class="small-filter-buttons m-1 flex-auto small-filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                     By Segment
                 </button>
             </div>
@@ -261,7 +349,8 @@
         <main class="flex min-h-0">
             <div class="flex-1 bg-[#F5F6F8] px-2 lg:px-5 xl:px-8 2xl:px-8 py-3">
 
-                <div id="product-grid" class="grid gap-4 grid-span-full grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
+                <div id="product-grid"
+                    class="grid gap-4 grid-span-full grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4 bg-[#F5F6F8]">
                     <div
                         class="group relative rounded-md flex flex-col overflow-hidden text-white w-full h-45 sm:h-70 md:h-85 lg:h-45 xl:h-55 2xl:h-60 product-item">
                         <img src="card.jpg" class="w-full h-full object-cover" alt="" />
@@ -570,33 +659,35 @@
                 <div class="flex justify-center flex-col h-full p-4 pl-0">
                     <div class="flex flex-col mb-3">
                         <button
-                            class="bg-red-600 hover:bg-red-700 rounded-3xl p-2 text-white mb-3 font-bold cursor-pointer" id="add-product-btn">
+                            class="bg-red-600 hover:bg-red-700 rounded-3xl p-2 text-white mb-3 font-bold cursor-pointer"
+                            id="large-add-product-btn">
                             Add Product
                         </button>
-                        <input id="searchInput" class="p-2 rounded-xs bg-white text-black placeholder-gray-500"
+                        <input id="large-search-input" class="p-2 rounded-xs bg-white text-black placeholder-gray-500"
                             type="text" placeholder="Search Products" />
                     </div>
 
                     <div class="flex flex-row justify-between mb-4">
-                        <button data-tab="all"
-                            class="filter-btn bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
+                        <button data-tab="large-filter-all"
+                            class="large-filter-buttons bg-black rounded-xs p-2 text-sm text-white cursor-pointer">
                             All
                         </button>
-                        <button data-tab="divison"
-                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="large-filter-divison"
+                            class="large-filter-buttons bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Divison
                         </button>
-                        <button data-tab="company"
-                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="large-filter-company"
+                            class="large-filter-buttons bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Company
                         </button>
-                        <button data-tab="segment"
-                            class="filter-btn bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
+                        <button data-tab="large-filter-segment"
+                            class="large-filter-buttons bg-white rounded-xs p-2 text-sm text-gray-600 cursor-pointer">
                             By Segment
                         </button>
                     </div>
 
-                    <div id="all" class="filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600">
+                    <div id="large-filter-all"
+                        class="large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600">
                         <div class="flex bg-white h-30 w-full mb-2 p-2 ">
                             <div class="basis-1/3 p-2">
                                 <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
@@ -659,8 +750,8 @@
                         </div>
                     </div>
 
-                    <div id="divison"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div id="large-filter-divison"
+                        class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
                         <div class="w-full">
                             <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>DIVISONS</div>
@@ -677,8 +768,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="segment"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div id="large-filter-segment"
+                        class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
                         <div class="w-full">
                             <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>SEGMENT</div>
@@ -920,8 +1011,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="company"
-                        class="hidden filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div id="large-filter-company"
+                        class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
                         <div class="w-full">
                             <div class="flex justify-between mb-2 font-bold text-xs">
                                 <div>COMPANIES</div>
@@ -941,7 +1032,359 @@
 
                 </div>
             </div>
-        </main>
+
+
+
+            <div class="hidden sticky top-30 h-[calc(100vh-7.5rem)] w-100 border-gray-200 bg-[#F5F6F8]">
+
+                <div id="small-filter-all"
+                    class="large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600">
+                    <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                        <div class="basis-1/3 p-2">
+                            <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
+                        </div>
+                        <div class="basis-2/3">
+                            <h3 class="font-bold text-sm">
+                                Modules & Polymer Products (120)
+                            </h3>
+                            <p class="text-xs">
+                                aman ipsum dolor sit amet consectetur adipisicing elit.
+                                Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                omnis quam ipsum. Eius, hic ipsam?r
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                        <div class="basis-1/3 p-2">
+                            <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
+                        </div>
+                        <div class="basis-2/3">
+                            <h3 class="font-bold text-sm">
+                                Modules & Polymer Products (120)
+                            </h3>
+                            <p class="text-xs">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                omnis quam ipsum. Eius, hic ipsam?r
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                        <div class="basis-1/3 p-2">
+                            <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
+                        </div>
+                        <div class="basis-2/3">
+                            <h3 class="font-bold text-sm">
+                                Modules & Polymer Products (120)
+                            </h3>
+                            <p class="text-xs">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                omnis quam ipsum. Eius, hic ipsam?r
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white h-30 w-full mb-2 p-2 ">
+                        <div class="basis-1/3 p-2">
+                            <img src="card.jpg" alt="" class="rounded-md w-full h-full object-cover" />
+                        </div>
+                        <div class="basis-2/3">
+                            <h3 class="font-bold text-sm">
+                                Modules & Polymer Products (120)
+                            </h3>
+                            <p class="text-xs">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Dolorum aliquam laboriosam cupiditate reiciendis. Dicta
+                                omnis quam ipsum. Eius, hic ipsam?r
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="small-filter-divison"
+                    class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div class="w-full">
+                        <div class="flex justify-between mb-2 font-bold text-xs">
+                            <div>DIVISONS</div>
+                            <div>NO. PRODUCTS</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="small-filter-segment"
+                    class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div class="w-full">
+                        <div class="flex justify-between mb-2 font-bold text-xs">
+                            <div>SEGMENT</div>
+                            <div>NO. PRODUCTS</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="small-filter-company"
+                    class="hidden large-filter-content sidebar-scroll overflow-y-auto flex-1 text-gray-600 bg-white p-2">
+                    <div class="w-full">
+                        <div class="flex justify-between mb-2 font-bold text-xs">
+                            <div>COMPANIES</div>
+                            <div>NO. PRODUCTS</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <div class="ml-2">Aerospace</div>
+                                </div>
+                                <div>(1)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    </main>
     </div>
 
 

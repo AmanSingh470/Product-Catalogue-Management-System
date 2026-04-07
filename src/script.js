@@ -3,7 +3,7 @@ const heading = document.getElementById("main-heading");
 const backImg = document.getElementById("back-img");
 const headerAction = document.querySelectorAll(".header-action");
 const headerLogo = document.getElementById("header-logo");
-const gridListFloating = document.getElementById("grid-list-floating");
+const smallGridList = document.getElementById("small-grid-list");
 const heroSection = document.getElementById("hero-section");
 
 window.addEventListener("scroll", () => {
@@ -40,13 +40,14 @@ window.addEventListener("scroll", () => {
     headerLogo.classList.add("text-white");
   }
   const heroBottom = heroSection.offsetHeight;
-  if(window.scrollY > heroBottom-500){
-    gridListFloating.classList.remove("hidden");
-    gridListFloating.classList.add("block");
+  
+  if(window.scrollY > heroBottom-(0.7*heroBottom)){
+    smallGridList.classList.remove("hidden");
+    smallGridList.classList.add("block");
   }
   else{
-    gridListFloating.classList.add("hidden");
-    gridListFloating.classList.remove("block");
+    smallGridList.classList.add("hidden");
+    smallGridList.classList.remove("block");
   }
 });
 
@@ -100,14 +101,16 @@ smallListButton.addEventListener("click", () => {
   smallListButton.classList.add('text-black');
 });
 
-const searchInput = document.getElementById("searchInput");
-const items = document.querySelectorAll(".product-item");
+const largeSearchInput = document.getElementById("large-search-input");
+let largeSearchItems = document.querySelectorAll(".product-item");
 
-searchInput.addEventListener("input", () => {
-  const value = searchInput.value.toLowerCase();
 
-  items.forEach(item => {
-    const text = item.innerText.toLowerCase();
+largeSearchInput.addEventListener("input", () => {
+  const value = largeSearchInput.value.toLowerCase();
+  
+  console.log(largeSearchItems);
+  largeSearchItems.forEach(item => {
+      const text = item.innerText.toLowerCase();
 
     if (text.includes(value)) {
       item.classList.remove("hidden"); // show
@@ -117,16 +120,33 @@ searchInput.addEventListener("input", () => {
   });
 });
 
-const largeFilterButtons = document.querySelectorAll(".large-filter-btn");
-let filterContents = document.querySelectorAll(".filter-content");
+const smallSearchInput = document.getElementById("small-search-input");
+let smallSearchItems = document.querySelectorAll(".product-item");
+
+smallSearchInput.addEventListener("input", () => {
+  const value = smallSearchInput.value.toLowerCase();
+
+  smallSearchItems.forEach(item => {
+    text = item.innerText.toLowerCase();
+
+    if (text.includes(value)) {
+      item.classList.remove("hidden"); // show
+    } else {
+      item.classList.add("hidden"); // hide
+    }
+  });
+});
+
+const largeFilterButtons = document.querySelectorAll(".large-filter-buttons");
+let largeFilterContents = document.querySelectorAll(".large-filter-content");
 
 largeFilterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
 
     const target = btn.dataset.tab;
-
+    
     // hide all content
-    filterContents.forEach(c => c.classList.add("hidden"));
+    largeFilterContents.forEach(c => c.classList.add("hidden"));
 
     // show selected content
     document.getElementById(target).classList.remove("hidden");
@@ -145,7 +165,7 @@ largeFilterButtons.forEach(btn => {
 });
 
 // ===== MODAL LOGIC (ONLY FOR SMALL DEVICES) =====
-const smallfilterButtons = document.getElementsByClassName('.small-filter-buttons');
+const smallfilterButtons = document.querySelectorAll('.small-filter-buttons');
 const smallFilterModal = document.getElementById("small-filter-modal");
 const smallFilterModalContent = document.getElementById("small-filter-modal-content");
 const smallFilterModalTitle = document.getElementById("small-filter-modal-title");
@@ -153,17 +173,17 @@ const smallFilterModalCloseBtn = document.getElementById("small-filter-modal-clo
 
 smallfilterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-
     // ONLY run modal on small screens
     if (window.innerWidth >= 1024) return; // lg breakpoint
     if(btn.dataset.tab == "all"){
       return;
     }
-    const targetId = btn.dataset.tab;
-    let filterContent = document.getElementById(targetId);
+    let target = btn.dataset.tab;
+    
+    let smallFilterContent = document.getElementById(target);
 
     smallFilterModalTitle.innerText = btn.innerText;
-    smallFilterModalContent.innerHTML = filterContent.innerHTML;
+    smallFilterModalContent.innerHTML = smallFilterContent.innerHTML;
 
     smallFilterModal.classList.remove("hidden");
     smallFilterModal.classList.add("flex");
@@ -177,8 +197,41 @@ smallFilterModalCloseBtn.addEventListener("click", () => {
 });
 
 // show results button
-const applyFiltersBtn = document.getElementById("apply-filters");
+const applyFiltersBtn = document.getElementById("apply-filters-btn");
 applyFiltersBtn.addEventListener("click", () => {
   smallFilterModal.classList.remove("flex");
   smallFilterModal.classList.add("hidden");
 });
+
+// Large Add Product
+let largeAddProductBtn = document.getElementById('large-add-product-btn');
+let largeAddProductModal = document.getElementById('large-add-product-modal');
+let closeLargeAddProductBtn = document.getElementById('close-large-add-product-modal');
+let largeAddProductModalContent = document.getElementById("large-add-product-modal-content");
+let addProductForm = document.getElementById("add-product-form");
+
+largeAddProductBtn.addEventListener("click", () => {
+  largeAddProductModal.classList.remove("hidden");
+  largeAddProductModal.classList.add("flex");
+});
+closeLargeAddProductBtn.addEventListener("click", () => {
+  largeAddProductModal.classList.remove("flex");
+  largeAddProductModal.classList.add("hidden");
+});
+
+// Small Add Product
+smallAddProductBtn = document.getElementById('small-add-product-btn');
+largeAddProductModal = document.getElementById('large-add-product-modal');
+closeLargeAddProductBtn = document.getElementById('close-large-add-product-modal');
+largeAddProductModalContent = document.getElementById("large-add-product-modal-content");
+addProductForm = document.getElementById("add-product-form");
+
+smallAddProductBtn.addEventListener("click", () => {
+  largeAddProductModal.classList.remove("hidden");
+  largeAddProductModal.classList.add("flex");
+});
+closeLargeAddProductBtn.addEventListener("click", () => {
+  largeAddProductModal.classList.remove("flex");
+  largeAddProductModal.classList.add("hidden");
+});
+
