@@ -221,10 +221,6 @@ closeLargeAddProductBtn.addEventListener("click", () => {
 
 // Small Add Product
 smallAddProductBtn = document.getElementById('small-add-product-btn');
-largeAddProductModal = document.getElementById('large-add-product-modal');
-closeLargeAddProductBtn = document.getElementById('close-large-add-product-modal');
-largeAddProductModalContent = document.getElementById("large-add-product-modal-content");
-addProductForm = document.getElementById("add-product-form");
 
 smallAddProductBtn.addEventListener("click", () => {
   largeAddProductModal.classList.remove("hidden");
